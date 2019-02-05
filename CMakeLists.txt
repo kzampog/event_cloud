@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(test_project)
+project(event_cloud)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
@@ -35,6 +35,9 @@ target_link_libraries(dvs_warp_field_2d ${LIBRARIES})
 
 add_executable(dvs_warp_field_hybrid src/dvs_warp_field_hybrid.cpp)
 target_link_libraries(dvs_warp_field_hybrid ${LIBRARIES})
+
+add_executable(dvs_warp_field_hybrid_ts_mirror src/dvs_warp_field_hybrid_ts_mirror.cpp)
+target_link_libraries(dvs_warp_field_hybrid_ts_mirror ${LIBRARIES})
 
 add_executable(dvs_warp_field_3d src/dvs_warp_field_3d.cpp)
 target_link_libraries(dvs_warp_field_3d ${LIBRARIES})
